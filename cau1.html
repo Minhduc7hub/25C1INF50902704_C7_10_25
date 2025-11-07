@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng Hover</title>
+    <style>
+        .hover-text {
+            display: inline-block;
+            padding: 10px;
+            background-color: blue; /* Màu nền ban đầu: xanh */
+            font-size: 20px; /* Font chữ ban đầu: 20px */
+            transform: matrix(1, 0, 0, 1, 0, 0); /* Transform ban đầu */
+            transition: background-color 0.3s ease, font-size 0.3s ease, transform 0.3s ease; /* Chuyển đổi mượt mà */
+            color: white; /* Màu chữ để dễ nhìn trên nền xanh */
+        }
+        .hover-text:hover {
+            background-color: red; /* Màu nền khi hover: đỏ */
+            font-size: 50px; /* Font chữ khi hover: 50px */
+            transform: matrix(1.4, -0.54, 0.54, 1.4, 0, 0); /* Transform khi hover */
+        }
+    </style>
+</head>
+<body>
+    <span class="hover-text">Khoa CNTTKD</span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+    <title>Hiệu ứng Hover Tự Thiết Kế: Bounce và Rainbow</title>
+    <style>
+        .hover-text {
+            display: inline-block;
+            padding: 10px;
+            background-color: lightyellow; /* Màu nền ban đầu: vàng nhạt */
+            font-size: 20px; /* Font chữ ban đầu: 20px */
+            transform: matrix(1, 0, 0, 1, 0, 0); /* Transform ban đầu */
+            transition: background-color 0.3s ease, font-size 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Chuyển đổi mượt mà */
+            color: black; /* Màu chữ ban đầu */
+        }
+        .hover-text:hover {
+            background-color: transparent; /* Màu nền khi hover: trong suốt để lộ rainbow */
+            font-size: 50px; /* Font chữ khi hover: 50px */
+            transform: matrix(1.4, -0.54, 0.54, 1.4, 0, 0) translateY(-10px); /* Transform khi hover + bounce (nhảy lên 10px) */
+            animation: bounce 0.5s ease-in-out; /* Hiệu ứng bounce */
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); /* Màu nền rainbow */
+            -webkit-background-clip: text; /* Áp dụng rainbow cho chữ */
+            -webkit-text-fill-color: transparent; /* Làm chữ trong suốt để lộ gradient */
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Hiệu ứng glow vàng */
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <span class="hover-text">Khoa CNTTKD</span>
+</body>
+</html>
